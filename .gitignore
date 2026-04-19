@@ -1,0 +1,110 @@
+# ----------------------
+# General
+# ----------------------
+.DS_Store
+Thumbs.db
+*.log
+logs/
+*.tmp
+*.temp
+*.swp
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# ----------------------
+# Node.js / Frontend
+# ----------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build folders
+dist/
+build/
+.next/
+out/
+coverage/
+
+# Vite
+.vite/
+
+# Parcel
+.cache/
+
+# ----------------------
+# React / Vue specifics
+# ----------------------
+*.eslintcache
+
+# ----------------------
+# Backend (Node / Express)
+# ----------------------
+uploads/
+*.pid
+*.seed
+
+# ----------------------
+# Python (if used)
+# ----------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.db
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# ----------------------
+# Java / Spring Boot
+# ----------------------
+target/
+*.class
+*.jar
+*.war
+
+# ----------------------
+# .NET
+# ----------------------
+bin/
+obj/
+
+# ----------------------
+# IDE / Editor files
+# ----------------------
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# ----------------------
+# OS files
+# ----------------------
+Desktop.ini
+
+# ----------------------
+# Testing / Coverage
+# ----------------------
+coverage/
+.nyc_output/
+
+# ----------------------
+# Docker
+# ----------------------
+docker-compose.override.yml
+
+# ----------------------
+# Misc
+# ----------------------
+*.pem
+*.key

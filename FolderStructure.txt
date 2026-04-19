@@ -1,0 +1,36 @@
+leetcode-clone/
+|-- apps/
+|   |-- primary-server/             
+|   |   |-- src/
+|   |   |   |-- controllers/        
+|   |   |   |-- routes/             
+|   |   |   |-- services/           # Logic for BullMQ (Producer)
+|   |   |   |-- socket/             # WebSocket handlers & Redis Subscriber
+|   |   |   |-- index.ts            # Entry point
+|   |   |-- Dockerfile
+|   |   |-- package.json
+|   |
+|   |-- worker-server/              # Code Execution Engine
+|       |-- src/
+|       |-- |-- consumers/          # BullMQ Worker (Consumer)
+|       |-- |-- engine/             # Logic to spin up execution containers
+|       |-- |-- producer/           # Redis Publisher for results
+|       |-- |-- index.ts            # Entry point
+|       |-- Dockerfile              # Needs Docker CLI or access to socket
+|       |-- package.json
+|
+|-- packages/                       # Shared internal libraries
+|   |-- database/                   # Prisma/Drizzle schemas & migrations
+|   |-- |-- schema.prisma
+|   |-- common/                     # Shared constants & interfaces
+|   |-- |-- index.ts                # (e.g., Job types, Result types)
+|   |-- ui/                         # (Optional) Shared React components
+|
+|-- infrastructure/                 # Deployment & Sandbox config
+|   |-- runners/                    # Dockerfiles for specific languages
+|       |-- python-runner/
+|       |-- node-runner/
+|
+|-- .env                            # Global environment variables
+|-- docker-compose.yaml             # Orchestrates Server, Worker, Redis, DB
+|-- turbo.json                      # Optional: For managing the monorepo
